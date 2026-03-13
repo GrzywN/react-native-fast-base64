@@ -40,13 +40,18 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-fast-base64-example",
+    "example": "yarn workspace react-native-screenshot-guard-example",
+    "start": "yarn example start",
+    "android": "yarn example android",
+    "ios": "yarn example ios",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
+    "lint": "eslint --fix \"**/*.{js,ts,tsx}\"",
+    "typecheck": "tsc",
+    "build": "bob build",
+    "test": "jest",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
-    "typecheck": "tsc",
-    "test": "jest",
-    "release": "release-it --only-version",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
+    "release": "release-it --only-version"
   },
   "keywords": [
     "react-native",
