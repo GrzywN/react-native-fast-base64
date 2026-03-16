@@ -8,7 +8,10 @@ export interface AppProps {
 
 export default function App({ title = 'react-native-fast-base64' }: AppProps) {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView
+      style={styles.scrollView}
+      contentContainerStyle={styles.container}
+    >
       <Text style={styles.title}>{title}</Text>
       <BenchmarkSection />
       <TestsSection />
@@ -17,6 +20,9 @@ export default function App({ title = 'react-native-fast-base64' }: AppProps) {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    backgroundColor: '#0d0d0d',
+  },
   container: {
     padding: 16,
     paddingTop: 60,
