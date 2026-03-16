@@ -25,6 +25,37 @@ Three APIs in one package:
 
 ---
 
+## Benchmarks
+
+Measured on an iPhone 16e simulator. Run the benchmarks yourself via the [example app](./example).
+
+| Encode | Decode |
+|--------|--------|
+| ![Buffer → base64 encode benchmark](./docs/benchmark-encode.png) | ![base64 → Buffer decode, btoa, atob benchmark](./docs/benchmark-decode-btoa-atob.png) |
+| ![atob, Buffer → base64url benchmark](./docs/benchmark-atob-url-encode.png) | ![base64url → Buffer, byteLength benchmark](./docs/benchmark-url-decode-bytelength.png) |
+
+Highlights at 1 KB:
+
+| Operation | fast-base64 | vs. base64-js | vs. Hermes |
+|-----------|------------|---------------|------------|
+| Buffer → base64 | 1.7M ops/s | 149× | — |
+| base64 → Buffer | 197K ops/s | 13× | — |
+| Buffer → base64url | 3.0M ops/s | 310× | — |
+| base64url → Buffer | 2.3M ops/s | 195× | — |
+| btoa | 315K ops/s | — | 3.4× faster than Hermes global |
+| atob | 477K ops/s | — | 1.4× faster than Hermes global |
+| byteLength | 4.0M ops/s | 3.8× | — |
+
+---
+
+## Tests
+
+106 tests covering TC39 spec vectors, base64-js compatibility, and C++ V8 port parity.
+
+![106 / 106 tests passing](./docs/tests.png)
+
+---
+
 ## Installation
 
 ```sh
