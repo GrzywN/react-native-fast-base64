@@ -44,7 +44,7 @@
     "start": "yarn example start",
     "android": "yarn example android",
     "ios": "yarn example ios",
-    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\" \"example/src/**/*.{js,ts,tsx}\"",
     "lint": "eslint --fix \"**/*.{js,ts,tsx}\"",
     "typecheck": "tsc",
     "build": "bob build",
