@@ -1,5 +1,6 @@
-#import <FastBase64Spec/FastBase64Spec.h>
+#import <React/RCTBridgeModule.h>
+#import <ReactCommon/RCTTurboModule.h>
 
-@interface FastBase64 : NSObject <NativeFastBase64Spec>
+@interface FastBase64 : NSObject <RCTBridgeModule, RCTTurboModule>
 
 @end
