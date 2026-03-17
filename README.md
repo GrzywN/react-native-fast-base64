@@ -29,10 +29,12 @@ Three APIs in one package:
 
 Measured on an iPhone 16e simulator. Run the benchmarks yourself via the [example app](./example).
 
-| Encode | Decode |
-|--------|--------|
-| ![Buffer → base64 encode benchmark](./docs/benchmark-encode.png) | ![base64 → Buffer decode, btoa, atob benchmark](./docs/benchmark-decode-btoa-atob.png) |
-| ![atob, Buffer → base64url benchmark](./docs/benchmark-atob-url-encode.png) | ![base64url → Buffer, byteLength benchmark](./docs/benchmark-url-decode-bytelength.png) |
+| | |
+|-|-|
+| ![Buffer → base64](./docs/00-benchmark-buf-encode.png) | ![base64 → Buffer](./docs/01-benchmark-buf-decode.png) |
+| ![btoa](./docs/02-benchmark-btoa.png) | ![atob](./docs/03-benchmark-atob.png) |
+| ![Buffer → base64url](./docs/04-benchmark-buf-encode-url.png) | ![base64url → Buffer](./docs/05-benchmark-buf-decode-url.png) |
+| ![byteLength](./docs/06-benchmark-byte-length.png) | |
 
 Highlights at 1 KB:
 
@@ -52,7 +54,7 @@ Highlights at 1 KB:
 
 106 tests covering TC39 spec vectors, base64-js compatibility, and C++ V8 port parity.
 
-![106 / 106 tests passing](./docs/tests.png)
+![106 / 106 tests passing](./docs/07-tests.png)
 
 ---
 

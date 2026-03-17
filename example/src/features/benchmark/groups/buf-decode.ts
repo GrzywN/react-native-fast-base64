@@ -1,4 +1,5 @@
 import * as Base64JS from 'base64-js';
+import * as QuickBase64 from 'react-native-quick-base64';
 import { toByteArray as fastToByteArray } from 'react-native-fast-base64';
 import { runGroup, type Group } from '../helpers';
 import { latin1ToUint8 } from '../converters';
@@ -20,6 +21,10 @@ export function bufDecodeGroup(
       {
         lib: 'base64-js',
         run: (sizeIndex) => Base64JS.toByteArray(inputs[sizeIndex]!.base64),
+      },
+      {
+        lib: 'quick-base64',
+        run: (sizeIndex) => QuickBase64.toByteArray(inputs[sizeIndex]!.base64),
       },
       {
         lib: 'fast-base64',
